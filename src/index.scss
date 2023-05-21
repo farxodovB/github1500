@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(35, 40, 65);
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.navbar {
+    padding: 10px;
+    background: rgb(19, 24, 45);
+    box-shadow: 0 0 10px black;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-size: 35px;
+        text-decoration: none;
+        cursor: pointer;
+
+        span {
+            font-size: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 25px;
+        color: #fff;
+
+        &:hover {
+            color: #bebebe;
+        }
+
+        &.active {
+            color: red;
+        }
+    }
+}
+
+.about {
+    height: calc(100vh - 115px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 65px;
+        margin-bottom: 20px;
+    }
+
+    &__postTitle {
+        color: #bebebe;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        width: 60%;
+        color: #bebebe;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: #bebebe;
+        }
+    }
+}
+
+.home {
+    min-height: calc(100vh - 165px);
+    padding-bottom: 30px;
+}
+
+.search {
+    margin-top: 50px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__form {
+        position: relative;
+        width: 400px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        font-size: 25px;
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70px;
+        border: none;
+        background: rgb(19, 24, 45);
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__clear {
+        padding: 15px 20px;
+        font-size: 25px;
+        color: #fff;
+        background: rgb(19, 24, 45);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.users {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.user {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    background: rgb(19, 24, 45);
+    padding: 10px;
+    border-radius: 10px;
+    // box-shadow: 5px 5px 10px #000;
+
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    &__login {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: #FF3D00;
+        text-decoration: none;
+        font-size: 20px;
+    }
+}
+
+.details {
+    min-height: calc(100vh - 175vh);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        margin: 10px 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+
+    &__location {
+        color: #bebebe;
+        font-size: 20px;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        svg {
+            color: #fff;
+            font-size: 25px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    &__github,
+    &__proweb {
+        width: 40%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background: rgb(63, 176, 196);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+
+    &__bio {
+        font-size: 20px;
+        color: #bebebe;
+    }
+}
+
+.details {
+    min-height: calc(100vh - 175px);
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 60px;
+        color: #FFF;
+        margin-bottom: 20px;
+    }
+
+    &__info {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__create,
+    &__update,
+    &__status {
+        font-size: 25px;
+        color: #bebebe;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: #fff;
+            font-size: 30px;
+            flex-basis: 200px;
+        }
+    }
+
+}
+
+.details {
+    &__bottom {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &__box {
+        background: rgb(19, 24, 45);
+        // border-radius: 20px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 25px;
+        gap: 15px;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        svg {
+            color: rgb(63, 176, 196);
+            font-size: 50px;
+        }
+    }
+
+
+    &__num {
+        font-weight: 700;
+        font-size: 30px;
+        color: #FFF;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 30px;
+        color: #bebebe;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    padding: 10px;
+    background: rgb(19, 24, 45);
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 40px;
+    color: #fff;
+
+    &__text {
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        width: 30%;
+    }
+
+    &__title {
+        font-size: 40px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 24px;
+        color: #bebebe;
+
+        & a {
+            color: red;
+            font-size: 20px;
+        }
+    }
+}
+
+.loading {
+    height: calc(100vh - 115px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #FF3D00;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
